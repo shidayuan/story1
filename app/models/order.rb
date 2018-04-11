@@ -14,8 +14,8 @@ class Order < ApplicationRecord
 
   has_many :product_lists
 
-  def set_payment_with!（method)
-    self.update_colunms(payment_method: method))
+  def set_payment_with!(method)
+    self.update_columns(payment_method: method)
   end
 
   def pay!
