@@ -11,11 +11,12 @@ class OrdersController < ApplicationController
      else
        render 'carts/checkout'
      end
+   end
 
      private
 
      def order_params
-      params.require(:order).permit(:billing_name, :billing_address, :shipping_name, :shipping_adress)
+      params.require(:order).permit(:billing_name, :billing_address, :shipping_name, :shipping_address)
     end
-    
+
 end
