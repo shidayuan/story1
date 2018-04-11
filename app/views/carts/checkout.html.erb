@@ -19,6 +19,9 @@
         <td>
           <%= cart_item.product.price %>
         </td>
+        <td>
+          <%= cart_item.quantity %>
+        </td>
 
       </tr>
       <% end %>
@@ -38,16 +41,19 @@
     <div class="order-form">
       <%= simple_form_for @order do |f| %>
 
-      <legend> 订购人</lagend>
+      <legend> 订购人</legend>
         <div class="form-group col-lg-6">
-          <%= f.input :builling_name %>
+          <%= f.input :billing_name %>
         </div>
         <div class="form-group col-lg-6">
         <%= f.input :billing_address %>
       </div>
 
       <legend> 收货人 </legend>
-      <div class="form-grou col-lg-6">
+      <div class="form-group col-lg-6">
+        <%= f.input :shipping_address %>
+      </div>
+      <div class="form-group col-lg-6">
         <%= f.input :shipping_address %>
       </div>
 
